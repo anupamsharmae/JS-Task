@@ -1,0 +1,374 @@
+/* globe styling */
+*{box-sizing: border-box;}
+h2,h3,p{
+    margin: 0 0 0.938rem 0;
+    line-height: 1.5;
+}
+ul{list-style-type: none;}
+a{text-decoration: none;}
+.section-wrap{
+    padding: 2rem;
+}
+form{
+    width: 30%;
+    padding: 1rem;
+}
+.form-group{
+    margin-bottom: 1rem;
+}
+.form-control{
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    background-color: #fff;
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 0.5rem;
+    resize: none;
+}
+.form--bg{
+    background-color: rgb(235, 235, 235);
+}
+.dflex{display: flex;}
+/* style for btn */
+.btn-wrap{
+    justify-content: center;
+}
+.btn{
+    padding: 0.625rem 0.938rem;
+    text-align: center;
+    border-radius: 0.313rem;
+    background-color: rgb(42, 131, 255);
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+.btn:hover{
+    background-color: #166bda;
+}
+.btn:active{
+    background-color: rgb(45, 120, 224);
+}
+/* ------------------frequency btn styling----------------- */
+.frequency-btn{
+    background-color: rgb(188, 225, 255);
+    margin: 0 0.625rem;
+    color: #000;
+}
+.toggle-btn--active{
+    background-color: rgb(0 106 255);
+    color: #fff;
+}
+.frequency-btn:hover{
+    background-color: rgb(145, 196, 255);
+}
+.toggle-btn--active:hover{
+    background-color: rgb(52, 137, 255);
+}
+/* ------------------select category section------------------------- */
+.form-select > option{
+    font-size: 0.875rem;
+}
+/* ------------------extras section------------------------- */
+.extra-item-wrap{
+    background-color: rgb(161, 210, 255);
+    flex-wrap: wrap;
+}
+.checkbox-wrap{
+    margin: 0.938rem;
+    text-align: center;
+    width: 10%;
+    height: auto;
+}
+.checkbox-control{
+    display: block;
+    width: 100%;
+    height: 5rem;
+    margin: 0 0 0.93rem 0;
+}
+/* ----------------reviews form styling---------------- */
+.review-form{
+    border: 1px solid rgb(175, 175, 175);
+    border-radius: 0.5rem;
+}
+.review-form .btn-wrap .submit-btn{
+    width: 100%;
+    font-size: 1.2rem;
+}
+.input--error{
+    border: 0.125rem solid red !important;
+    outline: none;
+}
+.review-form .helper-text{
+    color: red;
+    font-size: 0.75rem;
+}
+/* date and time */
+.current-date, .current-time{
+    padding: 1rem;
+    font-size: 2.5rem;
+}
+/* ---------------chat button styling------------------ */
+.chat-btn{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: rgb(0 106 255);
+    border-radius: 50%;
+    padding: 0.875rem;
+    box-shadow: 0 0 1rem rgb(33, 96, 184);
+}
+.chat-btn .chat-icon{
+    color: #fff;
+    font-size: 1.5rem;
+}
+.chat-btn::after{
+    position: absolute;
+    content: '';
+    background-color: rgba(255,69,0);
+    width: 0.75rem;
+    height: 0.75rem;
+    top: 0.125rem;
+    right: 0.125rem;
+    border-radius: 50%;
+}
+.chat-btn:active{
+    background-color: rgb(0 106 255);
+}
+/* ---------------- color-btn section ----------------------- */
+.color-btn-wrap{
+    padding: 1rem;
+    border: 2px solid transparent;
+    margin-bottom: 0.938rem;
+}
+.color-btn{
+    margin: 0 1rem;
+}
+/* colors for color-btn  */
+.color-btn--red{background-color: rgb(204, 24, 24);}
+.color-btn--yellow{background-color: rgb(228, 201, 48);}
+.color-btn--green{background-color: green;}
+.color-btn--blue{background-color: blue;}
+/* colors for color-btn-wrap */
+.color-btn-wrap--red{border: 2px solid rgb(204, 24, 24);}
+.color-btn-wrap--yellow{border: 2px solid rgb(228, 201, 48);}
+.color-btn-wrap--green{border: 2px solid green;}
+.color-btn-wrap--blue{border: 2px solid blue;}
+/* -------------accordian section--------------------------*/
+.accordian-wrap{
+    border: 1px solid rgb(206, 206, 206);
+    width: 30%;
+    border-radius: 0.5rem;
+    padding: 1.5rem 1rem 1rem;
+    margin: auto;
+}
+.accordian{
+    margin-bottom: 0.5rem;
+}
+.arrow-left, .arrow-down{
+    position: relative;
+}
+.arrow-left::before{
+    position: absolute;
+    content: '\f105';
+    font-family: "Font Awesome 5 Pro";
+    left: 0.313rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+.arrow-down::before{
+    position: absolute;
+    content: '\f105';
+    font-family: "Font Awesome 5 Pro";
+    left: 0.313rem;
+    top: 50%;
+    font-size: 1.5rem;
+    transform: translateY(-50%) rotate(90deg);
+}
+.accordian-btn{
+    background-color: rgb(253, 253, 253);
+    color: #000;
+    border-radius: 0;
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+    padding: 0.875rem 0.875rem 0.875rem 2rem;
+}
+.accordian-btn:active{
+    background-color: rgb(224, 224, 224);
+}
+.accordian-content{
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+.accordian-desc{
+    margin: 0;
+    color: rgb(110, 110, 110);
+}
+.collapse{display:none;}
+/* -------------    drag drop section   --------------------*/
+.column{
+    width:50%;
+    padding:1rem
+}
+.drag-drop-container{
+    border: 1px solid gray;
+    width: 100%;
+    min-height: 10rem;
+    height: 100%;
+}
+.draggable-list{
+    background-color: rgb(234, 247, 255);
+    margin: 0;
+    padding: 0 2rem;
+    list-style-type: none;
+    min-height: 10rem;
+    max-height: 100%;
+}
+.draggable-item{
+    padding:1rem;
+    margin:0 0 0.5rem 0;
+    width: 50%;
+}
+.draggable-item:hover{
+    background-color: rgb(145, 196, 255);
+    cursor: pointer;
+    user-select: none;
+}
+.draggable-item:active{
+    transform: scale(0.99);
+}
+.tooltip{
+    position: relative;
+    cursor: pointer;
+    /* float: right; */
+}
+.tooltip-text{
+    position: absolute;
+    width: 256px;
+    padding: 0.875rem;
+    margin: 0 0.625rem;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 0 1rem rgba(0, 0, 0,0.2);
+    z-index: 9;
+}
+/* -------------------Sub-menu drop-down sections----------------------- */
+.drop-down-wrap{
+    width: 25%;
+}
+.icon-gear{
+    margin-right: 1rem;
+}
+.menu {
+    padding: 0;
+}
+.submenu{
+    padding-left: 0.625rem;
+}
+.menu-link{
+    display: inline-block;
+    padding: 0.5rem;
+    width: 100%;
+    color: gray;
+    font-size: 1.2rem;
+}
+.submenu .menu-link{
+    padding-left: 2rem;
+}
+.menu-link:hover{
+    background-color: #f5f5f5;
+}
+.menu-link:active{
+    transform: scale(0.98);
+}
+.menu-item-child > .menu-link{
+    color: #303030;
+}
+.menu-item-child > .menu-link:hover{
+    background-color: #cccccc;
+}
+.menu-item-child .arrow-left::before, .menu-item-child .arrow-down::before{
+   left: 94%;
+}
+/* ------------------- DRAWER SECTIONS----------------------- */
+/* .drawer-btn-wrap{
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid rgb(42, 131, 255);
+}
+.drawer-btn{
+    background-color: #fff;
+    color: rgb(118, 175, 255);
+    margin: 1rem;
+    font-weight: bold;
+}
+.overlay-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+.overlay-content{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+}
+.overlay-content--left{
+    width: 20%;
+    height: 100%;
+    left: 0;
+}
+.overlay-content--right{
+    width: 20%;
+    height: 100%;
+    right: 0;
+}
+.overlay-content--top{
+    width: 100%;
+    height: auto;
+    top: 0;
+}
+.overlay-content--bottom{
+    width: 100%;
+    height: auto;
+    bottom: 0;
+}
+.drawer .submenu{
+    padding: 0.75rem 0 0 0;
+    margin: 0;
+}
+.drawer .submenu .menu-item{
+    margin-bottom: 0.625rem;
+}
+.drawer .submenu:first-child{
+    border-bottom: 1px solid rgb(184, 184, 184);
+}
+.overlay-content--top .drawer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.overlay-content--top .submenu, .overlay-content--top .submenu .menu-item{
+    display: inline-block;
+    margin: 0;
+}
+.overlay-content--top .submenu{
+    padding: 0;
+}
+.overlay-content--top .submenu .menu-link{
+    padding: 0.5rem 1rem;
+    margin:0 1rem;
+    width: auto;
+}
+.overlay-content--top .submenu:first-child{
+    border-bottom: 0;
+    border-right: 1px solid rgb(184, 184, 184);
+} */
