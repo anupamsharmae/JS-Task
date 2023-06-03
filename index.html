@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Form</title>
+   <title>JS TASKS</title>
    <link rel="stylesheet" href="./assets/css/style.css">
+   <!-- dragula css link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.6.6/dragula.min.css"
+      integrity="sha512-49xW99xceMN8dDoWaoCaXvuVMjnUctHv/jOlZxzFSMJYhqDZmSF/UnM6pLJjQu0YEBLSdO1DP0er6rUdm8/VqA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
    <!-- font-awesome link -->
    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
-      crossorigin="anonymous" />
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
 </head>
+
 <body>
    <!-- FORM SECTION -->
    <div class="section-wrap">
       <h3 class="form-title">Forms</h3>
       <!-- form -->
-      <form action="" class="review-form">
+      <form id="review_form" action="" class="form review-form">
          <div class="form-group">
             <label for="fname">Name</label>
-            <input type="text" placeholder="Fullname" name="fname" id="fname" class="form-control">
+            <input type="text" placeholder="Full Name" name="fname" id="fname" class="form-control">
             <span id="helperName" class="helper-text"></span>
          </div>
          <div class="form-group">
@@ -29,7 +35,7 @@
          </div>
          <div class="form-group">
             <label for="description">Review</label>
-            <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+            <textarea name="description" id="description" cols="30" rows="5" class="form-control"></textarea>
             <span id="helperReview" class="helper-text"></span>
          </div>
          <div class="btn-wrap dflex">
@@ -37,97 +43,106 @@
          </div>
       </form>
    </div>
-   <!-- ACCORDIAN SECTION-->
+   <!-- ACCORDION SECTION-->
    <!-- <i class="far fa-angle-right"></i> -->
    <div class="section-wrap">
-      <div class="accordian-wrap">
+      <h3>Accordion Section</h3>
+      <div class="accordion-wrap">
          <h3 class="section-title">Popular Questions</h3>
-         <div class="accordian-item-wrap">
-            <!-- accordian -->
-         <div class="accordian">
-            <div class="accordian-header">
-               <button id="accordian_one" class="btn accordian-btn arrow-down">How to schedule online?</button>
+         <div class="accordion-item-wrap">
+            <!-- accordion -->
+            <div class="accordion">
+               <div class="accordion-header">
+                  <button id="accordion_one" class="btn accordion-btn arrow-down">How to schedule online?</button>
+               </div>
+               <div id="accordion_one_content" class="accordion-content">
+                  <p class="accordion-desc">To schedule online, all you have to fill out some details about
+                     what you need, who you are, pick date/time and wait for a confirmation to arrive.
+                  </p>
+               </div>
             </div>
-            <div id="accordian_one_content" class="accordian-content">
-               <p class="accordian-desc">To schedule online, all you have to fill outsome details about
-                 what you need, who you are, pick date/time and wait for a confirmation to arrive.
-               </p>
+            <!-- accordion -->
+            <div class="accordion">
+               <div class="accordion-header">
+                  <button id="accordion_two" class="btn accordion-btn arrow-left">When will I get a
+                     confirmation?</button>
+               </div>
+               <div id="accordion_two_content" class="accordion-content collapse">
+                  <p class="accordion-desc">To schedule online, all you have to fill out some details about
+                     what you need, who you are, pick date/time and wait for a confirmation to arrive.
+                  </p>
+               </div>
             </div>
-         </div>
-         <!-- accordian -->
-         <div class="accordian">
-            <div class="accordian-header">
-               <button id="accordian_two" class="btn accordian-btn arrow-left">When will I get a confirmation?</button>
+            <!-- accordion -->
+            <div class="accordion">
+               <div class="accordion-header">
+                  <button id="accordion_three" class="btn accordion-btn arrow-left">Do you have a phone number?</button>
+               </div>
+               <div id="accordion_three_content" class="accordion-content collapse">
+                  <p class="accordion-desc">To schedule online, all you have to fill out some details about
+                     what you need, who you are, pick date/time and wait for a confirmation to arrive.
+                  </p>
+               </div>
             </div>
-            <div id="accordian_two_content" class="accordian-content collapse">
-               <p class="accordian-desc">To schedule online, all you have to fill outsome details about
-                 what you need, who you are, pick date/time and wait for a confirmation to arrive.
-               </p>
+            <!-- accordion -->
+            <div class="accordion">
+               <div class="accordion-header">
+                  <button id="accordion_four" class="btn accordion-btn arrow-left">How do I select a date and
+                     time?</button>
+               </div>
+               <div id="accordion_four_content" class="accordion-content collapse">
+                  <p class="accordion-desc">To schedule online, all you have to fill out some details about
+                     what you need, who you are, pick date/time and wait for a confirmation to arrive.
+                  </p>
+               </div>
             </div>
-         </div>
-         <!-- accordian -->
-         <div class="accordian">
-            <div class="accordian-header">
-               <button id="accordian_three" class="btn accordian-btn arrow-left">Do you have a phone number?</button>
+            <!-- accordion -->
+            <div class="accordion">
+               <div class="accordion-header">
+                  <button id="accordion_five" class="btn accordion-btn arrow-left">Can I Later reschedule my booking
+                     online?</button>
+               </div>
+               <div id="accordion_five_content" class="accordion-content collapse">
+                  <p class="accordion-desc">To schedule online, all you have to fill out some details about
+                     what you need, who you are, pick date/time and wait for a confirmation to arrive.
+                  </p>
+               </div>
             </div>
-            <div id="accordian_three_content" class="accordian-content collapse">
-               <p class="accordian-desc">To schedule online, all you have to fill outsome details about
-                 what you need, who you are, pick date/time and wait for a confirmation to arrive.
-               </p>
-            </div>
-         </div>
-         <!-- accordian -->
-         <div class="accordian">
-            <div class="accordian-header">
-               <button id="accordian_four" class="btn accordian-btn arrow-left">How do I select a date and time?</button>
-            </div>
-            <div id="accordian_four_content" class="accordian-content collapse">
-               <p class="accordian-desc">To schedule online, all you have to fill outsome details about
-                 what you need, who you are, pick date/time and wait for a confirmation to arrive.
-               </p>
-            </div>
-         </div>
-         <!-- accordian -->
-         <div class="accordian">
-            <div class="accordian-header">
-               <button id="accordian_five" class="btn accordian-btn arrow-left">Can I Later reschedule my booking online?</button>
-            </div>
-            <div id="accordian_five_content" class="accordian-content collapse">
-               <p class="accordian-desc">To schedule online, all you have to fill outsome details about
-                 what you need, who you are, pick date/time and wait for a confirmation to arrive.
-               </p>
-            </div>
-         </div>
          </div>
       </div>
    </div>
-   <!-- FORM DATA SUBMIT-BTN SECTION-->
+   <!-- DRAG-DROP SECTION-->
    <div class="section-wrap">
       <h3>Drag-Drop Section</h3>
       <div class="dflex">
          <div class="column">
             <div id="img_container_1" class="drag-drop-container" ondrop="drop(event)" ondragover="allowDrop(event)">
-               <img src="./assets/images/404.png" id="draggable_img" draggable="true" ondragstart="drag(event)" alt="404 error" width="300" height="180">
+               <img src="./assets/images/404.png" id="draggable_img" draggable="true" ondragstart="drag(event)"
+                  alt="404 error" width="300" height="180">
             </div>
          </div>
          <div class="column">
-            <div id="img_container_1" class="drag-drop-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="img_container_2" class="drag-drop-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
          </div>
       </div>
       <div class="">
          <h5>Draggable list</h5>
          <div class="dflex">
             <div class="column">
-               <div id="drop_container" class="drag-drop-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+               <div id="drop_container" class="drag-drop-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+               </div>
             </div>
             <div class="column">
                <ul id="drag_list" class="draggable-list" ondrop="drop(event)" ondragover="allowDrop(event)">
-                  <li id="list_1" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 1</li>
-                  <li id="list_2" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 2</li>
-                  <li id="list_3" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 3</li>
-                  <li id="list_4" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 4</li>
-                  <li id="list_5" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 5</li>
-                  <li id="list_6" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 6</li>
+                  <li id="list_1" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 1
+                  </li>
+                  <li id="list_2" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 2
+                  </li>
+                  <li id="list_3" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 3
+                  </li>
+                  <li id="list_4" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 4
+                  </li>
                </ul>
             </div>
          </div>
@@ -136,43 +151,139 @@
          <h5>Draggable copy</h5>
          <div class="dflex">
             <div class="column">
-               <div id="copy_container" class="drag-drop-container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+               <div id="copy_container" class="drag-drop-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+               </div>
             </div>
             <div class="column">
                <ul id="drag_list_2" class="draggable-list" ondrop="drop(event)" ondragover="allowDrop(event)">
-                  <li id="list_11" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 1</li>
-                  <li id="list_22" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 2</li>
-                  <li id="list_33" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 3</li>
-                  <li id="list_44" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 4</li>
-                  <li id="list_55" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 5</li>
-                  <li id="list_66" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 6</li>
+                  <li id="list_11" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 1
+                  </li>
+                  <li id="list_22" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 2
+                  </li>
+                  <li id="list_33" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 3
+                  </li>
+                  <li id="list_44" class="draggable-item" draggable="true" ondragstart="drag(event)">Draggable item 4
+                  </li>
                </ul>
             </div>
          </div>
       </div>
    </div>
+   <!-- DRAGULA DRAG-DROP SECTION-->
+   <div class="section-wrap ">
+      <h3>Dragula Library (Drag-Drop)</h3>
+      <!--drag-drop container -->
+      <div class="wrapper">
+         <h4>Drag-drop and reorder</h4>
+         <div class="dflex">
+            <div class="column">
+               <div class="drag-container">
+                  <ul id="dragDrop_container_left" class="draggable-list">
+                     <li class="draggable-item">Dragula API item 1</li>
+                     <li class="draggable-item">Dragula API item 2</li>
+                     <li class="draggable-item">Dragula API item 3</li>
+                     <li class="draggable-item">Dragula API item 4</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="column">
+               <div class="drag-container">
+                  <ul id="dragDrop_container_right" class="draggable-list">
+                     <li class="draggable-item">Dragula API item 1</li>
+                     <li class="draggable-item">Dragula API item 2</li>
+                     <li class="draggable-item">Dragula API item 3</li>
+                     <li class="draggable-item">Dragula API item 4</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- remove-spill container -->
+      <div class="wrapper remove-spill">
+         <h3>Drag-out the item from the container to remove item</h3>
+         <div class="dflex">
+            <div class="column">
+               <div class="drag-container">
+                  <h4>Left container</h4>
+                  <ul id="removeOnSpill_container_left" class="draggable-list">
+                     <li class="draggable-item">Dragula API item 1</li>
+                     <li class="draggable-item">Dragula API item 2</li>
+                     <li class="draggable-item">Dragula API item 3</li>
+                     <li class="draggable-item">Dragula API item 4</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="column">
+               <div class="drag-container">
+                  <h4>Right container</h4>
+                  <ul id="removeOnSpill_container_right" class="draggable-list">
+                     <li class="draggable-item">Dragula API item 1</li>
+                     <li class="draggable-item">Dragula API item 2</li>
+                     <li class="draggable-item">Dragula API item 3</li>
+                     <li class="draggable-item">Dragula API item 4</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!--copy-item container -->
+      <div class="wrapper copy-item">
+         <h3>Drag item to copy into the container</h3>
+         <p id="dragItem"></p>
+         <div class="dflex">
+            <div class="column">
+               <div class="drag-container">
+                  <h4>Item container</h4>
+                  <ul id="copy_container_left" class="draggable-list">
+                     <li class="draggable-item">Dragula API item 1</li>
+                     <li class="draggable-item">Dragula API item 2</li>
+                     <li class="draggable-item">Dragula API item 3</li>
+                     <li class="draggable-item">Dragula API item 4</li>
+                  </ul>
+               </div>
+            </div>
+            <div class="column">
+               <div class="drag-container">
+                  <h4>Copy container</h4>
+                  <ul id="copy_container_right" class="draggable-list"></ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- TOOLTIP -->
+   <div class="section-wrap">
+      <h3>Tooltip Section</h3>
+      <div class="tooltip-wrapper wrap">
+         <span data-tooltip="tooltip" class="tooltip" title="The orange 'Pending' tag if there is one will let you know 
+         that the job has not yet been charged but it was completed." data-title="The orange 'Pending' tag if there is one will let you know 
+         that the job has not yet been charged but it was completed.">hover on me!</span>
+      </div>
+   </div>
    <!-- SUBMENU SECTION -->
    <div class="section-wrap">
       <h3>Submenus Section</h3>
-      <div class="drop-down-wrap">
+      <div class="dropdown-wrap wrap">
          <ul id="menu" class="menu">
-            <li class="menu-item menu-item-child"><a href="" class="menu-link arrow-down"><i class="fal fa-cog icon-gear"></i>Settings</a>
+            <li class="menu-item menu-item-child"><a href="" class="menu-link arrow-down"><i
+                     class="fal fa-cog icon-gear"></i>Settings</a>
                <ul id="settings_menu" class="submenu collapse">
                   <li class="menu-item"><a href="" class="menu-link">Account</a></li>
                   <li class="menu-item"><a href="" class="menu-link">General</a></li>
                   <li class="menu-item"><a href="" class="menu-link">Translation</a></li>
-                  <li class="menu-item"><a href="" class="menu-link">Desgin Forms & Website</a></li>
+                  <li class="menu-item"><a href="" class="menu-link">Design Forms & Website</a></li>
                   <li class="menu-item menu-item-child"><a href="" class="menu-link arrow-down">Industries</a>
-                     <ul id="industry_menu" class="submenu">
-                        <li class="menu-item menu-item-child"><a href="" class="menu-link arrow-down">Office Cleaning</a>
-                           <ul id="office_cleaning_menu" class="submenu">
+                     <ul id="industry_menu" class="submenu collapse">
+                        <li class="menu-item menu-item-child"><a href="" class="menu-link arrow-down">Office
+                              Cleaning</a>
+                           <ul id="office_cleaning_menu" class="submenu collapse">
                               <li class="menu-item"><a href="" class="menu-link">Form 4</a></li>
                               <li class="menu-item"><a href="" class="menu-link">Form 5</a></li>
                               <li class="menu-item"><a href="" class="menu-link">Settings</a></li>
                            </ul>
                         </li>
                         <li class="menu-item menu-item-child"><a href="" class="menu-link arrow-down">Home Cleaning</a>
-                           <ul id="home_cleaning_menu" class="submenu">
+                           <ul id="home_cleaning_menu" class="submenu collapse">
                               <li class="menu-item"><a href="" class="menu-link">Cleaning 1</a></li>
                               <li class="menu-item"><a href="" class="menu-link">Cleaning 2 </a></li>
                               <li class="menu-item"><a href="" class="menu-link">Cleaning 3</a></li>
@@ -187,38 +298,141 @@
       </div>
    </div>
    <!-- DRAWER SECTION -->
-   <!-- <div class="section-wrap">
+   <div class="section-wrap">
       <h3>Drawer Section</h3>
       <div class="dflex drawer-btn-wrap">
-         <button class="btn drawer-btn" onclick="drawerBtn(event)">LEFT</button>
-         <button class="btn drawer-btn" onclick="drawerBtn(event)">RIGHT</button>
-         <button class="btn drawer-btn" onclick="drawerBtn(event)">TOP</button>
-         <button class="btn drawer-btn" onclick="drawerBtn(event)">BOTTOM</button>
+         <button data-tooltip="tooltip" data-position="left" data-title="Left Drawer" title="Left Drawer"
+            class="btn drawer-btn" data-toggle="drawer" data-target="#drawerModal" data-position="left">LEFT</button>
+         <button data-tooltip="tooltip" data-position="right" data-title="Right Drawer" title="Right Drawer"
+            class="btn drawer-btn" data-toggle="drawer" data-target="#drawerModal" data-position="right">RIGHT</button>
+         <button data-tooltip="tooltip" data-position="top" data-title="Top Drawer" title="Top Drawer"
+            class="btn drawer-btn" data-toggle="drawer" data-target="#drawerModal" data-position="top">TOP</button>
+         <button data-tooltip="tooltip" data-position="bottom" data-title="Bottom Drawer" title="Bottom Drawer"
+            class="btn drawer-btn" data-toggle="drawer" data-target="#drawerModal"
+            data-position="bottom">BOTTOM</button>
       </div>
-      <div id="drawer_wrap" class="drawer-wrap">
-         <div id="overlay" class="overlay-wrap">
-            <div id="drawer_content" class="overlay-content overlay-content--top">
-               <div class="drawer">
-                 
-                  <ul id="" class="submenu">
-                     <li class="menu-item"><a href="" class="menu-link">Inbox</a></li>
-                     <li class="menu-item"><a href="" class="menu-link">Starred</a></li>
-                     <li class="menu-item"><a href="" class="menu-link">Send email</a></li>
-                     <li class="menu-item"><a href="" class="menu-link">Drafts</a></li>
-                  </ul>
-                  
-                  <ul id="" class="submenu">
-                     <li class="menu-item"><a href="" class="menu-link">All mail</a></li>
-                     <li class="menu-item"><a href="" class="menu-link">Trash</a></li>
-                     <li class="menu-item"><a href="" class="menu-link">Spam</a></li>
-                  </ul>
-               </div>
+      <div id="drawerModal" class="overlay drawer-overlay collapse">
+         <span data-modal="backDrop-drawer" class="overlay"></span>
+         <div data-modal-position="position" class="overlay-content drawer-overlay-content">
+            <div class="drawer">
+               <ul class="submenu">
+                  <li class="menu-item"><a href="" class="menu-link"><i class="far fa-inbox-in"></i>Inbox</a></li>
+                  <li class="menu-item"><a href="" class="menu-link"><i class="fas fa-envelope"></i>Starred</a></li>
+                  <li class="menu-item"><a href="" class="menu-link"><i class="far fa-inbox-in"></i>Send email</a></li>
+                  <li class="menu-item"><a href="" class="menu-link"><i class="fas fa-envelope"></i>Drafts</a></li>
+               </ul>
+               <ul class="submenu">
+                  <li class="menu-item"><a href="" class="menu-link"><i class="far fa-inbox-in"></i>All mail</a></li>
+                  <li class="menu-item"><a href="" class="menu-link"><i class="fas fa-envelope"></i>Trash</a></li>
+                  <li class="menu-item"><a href="" class="menu-link"><i class="far fa-inbox-in"></i>Spam</a></li>
+               </ul>
             </div>
          </div>
       </div>
-   </div> -->
-   <!-- javacript -->
+   </div>
+   <!-- MODAL SECTION -->
+   <div class="section-wrap">
+      <h3>Modal/Popup Section</h3>
+      <div class="btn-wrap wrap">
+         <button class="btn" data-toggle="modal" data-target="#modal">Open Modal</button>
+      </div>
+      <div id="modal" class="overlay modal-wrap collapse">
+         <span data-modal="backDrop-modal" class="overlay"></span>
+         <div data-modal="modal" class="overlay-content">
+            <div class="modal-header dflex">
+               <h2 class="modal-title">Create audience</h2>
+               <button class="btn close-btn" data-toggle="close" data-target="#modal"><i
+                     class="fal fa-times"></i></button>
+            </div>
+            <div class="modal-content">
+               <form action="" class="modal-form">
+                  <div class="form-group">
+                     <label for="name">Audience name</label>
+                     <input type="text" placeholder="Enter the name for the audience" class="form-control">
+                  </div>
+               </form>
+            </div>
+            <div class="modal-btn-wrap dflex">
+               <button class="btn modal-btn">Save</button>
+               <button class="btn modal-btn" data-toggle="close" data-target="#modal">Cancel</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- TWO LEVEL MODAL SECTION -->
+   <div class="section-wrap">
+      <h3>Two-level Modal Section</h3>
+      <div class="btn-wrap wrap">
+         <button class="btn" data-toggle="modal" data-target="#twoLevelModal">Open Modal</button>
+      </div>
+      <!-- modal 1 -->
+      <div id="twoLevelModal" class="overlay modal-wrap two-level-modal collapse">
+         <span data-modal="backDrop-modal" class="overlay"></span>
+         <div data-modal="modal" class="overlay-content">
+            <div class="modal-header dflex">
+               <h2 class="modal-title">Edit template</h2>
+               <button class="btn close-btn" data-toggle="close" data-target="#twoLevelModal"><i
+                     class="fal fa-times"></i></button>
+            </div>
+            <div class="modal-content">
+               <form action="" class="modal-form">
+                  <div class="form-group">
+                     <label for="modalTitle">Title</label>
+                     <input type="text" id="modalTitle" name="modalTitle" placeholder="Thank you for being a customer"
+                        class="form-control">
+                  </div>
+                  <div class="form-group">
+                     <div class="label-container dflex">
+                        <div class="label-wrap">
+                           <label for="message">Message</label>
+                        </div>
+                        <div class="modal-widget dflex">
+                           <button data-toggle="modal" data-target="#modal2" class="btn"><i
+                                 class="fal fa-comment-alt-lines"></i>Send Message</button>
+                        </div>
+                     </div>
+                     <textarea name="message" id="message" cols="30" rows="10"
+                        placeholder="We'd like to thank you for being a valued customer. If you ever need anything just let us know."
+                        class="form-control"></textarea>
+                  </div>
+               </form>
+            </div>
+            <div class="modal-btn-wrap dflex">
+               <button class="btn modal-btn">Update</button>
+               <button class="btn modal-btn" data-toggle="close" data-target="#twoLevelModal">Cancel</button>
+            </div>
+         </div>
+      </div>
+      <!-- modal 2 -->
+      <div id="modal2" class="overlay modal-wrap collapse">
+         <span data-modal="backDrop-modal" class="overlay"></span>
+         <div data-modal="modal" class="overlay-content">
+            <div class="modal-header dflex">
+               <h2 class="modal-title">Two level modal</h2>
+               <button class="btn close-btn" data-toggle="close" data-target="#modal2"><i
+                     class="fal fa-times"></i></button>
+            </div>
+            <div class="modal-content">
+               <form action="" class="modal-form">
+                  <div class="form-group">
+                     <label for="name">Audience name</label>
+                     <input type="text" placeholder="Enter the name for to wish you luck!" class="form-control">
+                  </div>
+               </form>
+            </div>
+            <div class="modal-btn-wrap dflex">
+               <button class="btn modal-btn">Save</button>
+               <button class="btn modal-btn" data-toggle="close" data-target="#modal2">Cancel</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- javascript -->
    <script src="./assets/js/main.js"></script>
-   <script src='https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js'></script>
+   <!-- dragula js link -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.6.6/dragula.min.js"
+      integrity="sha512-MrA7WH8h42LMq8GWxQGmWjrtalBjrfIzCQ+i2EZA26cZ7OBiBd/Uct5S3NP9IBqKx5b+MMNH1PhzTsk6J9nPQQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
+
 </html>

@@ -1,35 +1,53 @@
-/* globe styling */
+/*
+*=================== GLOBAL STYLE ===========================   
+*/
 *{box-sizing: border-box;}
-h2,h3,p{
+body{font-family: Arial, Helvetica, sans-serif;}
+.section-wrap{padding: 2rem;}
+h2,h3,h4,p{
     margin: 0 0 0.938rem 0;
     line-height: 1.5;
+    letter-spacing: 0.5px;
 }
-ul{list-style-type: none;}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 a{text-decoration: none;}
-.section-wrap{
-    padding: 2rem;
-}
-form{
-    width: 30%;
+/*
+    form styling
+*/
+.form{
+    max-width: 20rem;
     padding: 1rem;
 }
-.form-group{
-    margin-bottom: 1rem;
-}
+.form-group{margin-bottom: 1rem;}
 .form-control{
     width: 100%;
     padding: 1rem;
     margin-top: 0.5rem;
     background-color: #fff;
     border: 1px solid rgb(175, 175, 175);
-    border-radius: 0.5rem;
+    border-radius: 0.313rem;
+    font-family: Arial, Helvetica, sans-serif;
     resize: none;
 }
-.form--bg{
-    background-color: rgb(235, 235, 235);
-}
+.form--bg{background-color: rgb(235, 235, 235);}
+/*
+    common class styling
+*/
 .dflex{display: flex;}
-/* style for btn */
+.collapse{display:none;}
+.modal-open{overflow: hidden;}
+.wrap{padding: 1rem;}
+.wrapper{margin-bottom: 1.2rem;}
+.wrapper h3{
+    margin: 2rem 0 0;
+}
+/* 
+    style for btn 
+*/
 .btn-wrap{
     justify-content: center;
 }
@@ -44,13 +62,11 @@ form{
     cursor: pointer;
     transition: all 0.2s ease-in-out;
 }
-.btn:hover{
-    background-color: #166bda;
-}
-.btn:active{
-    background-color: rgb(45, 120, 224);
-}
-/* ------------------frequency btn styling----------------- */
+.btn:hover{background-color: #166bda;}
+.btn:active{background-color: rgb(45, 120, 224);}
+/*
+============================== FREQUENCY-BTN SECTION ==============================
+ */
 .frequency-btn{
     background-color: rgb(188, 225, 255);
     margin: 0 0.625rem;
@@ -60,24 +76,25 @@ form{
     background-color: rgb(0 106 255);
     color: #fff;
 }
-.frequency-btn:hover{
-    background-color: rgb(145, 196, 255);
-}
-.toggle-btn--active:hover{
-    background-color: rgb(52, 137, 255);
-}
-/* ------------------select category section------------------------- */
+.frequency-btn:hover{background-color: rgb(145, 196, 255);}
+.toggle-btn--active:hover{background-color: rgb(52, 137, 255);}
+/*
+============================== SELECT CATEGORY SECTION ==============================
+ */
 .form-select > option{
     font-size: 0.875rem;
 }
-/* ------------------extras section------------------------- */
+/*
+================================== EXTRAS SECTION =================================
+ */
 .extra-item-wrap{
     background-color: rgb(161, 210, 255);
     flex-wrap: wrap;
 }
 .checkbox-wrap{
-    margin: 0.938rem;
+    padding: 1rem;
     text-align: center;
+    font-size: 0.875rem;
     width: 10%;
     height: auto;
 }
@@ -87,8 +104,12 @@ form{
     height: 5rem;
     margin: 0 0 0.93rem 0;
 }
-/* ----------------reviews form styling---------------- */
+/*
+================================== REVIEWS FORM =================================
+ */
+
 .review-form{
+    margin-left:2rem;
     border: 1px solid rgb(175, 175, 175);
     border-radius: 0.5rem;
 }
@@ -104,17 +125,21 @@ form{
     color: red;
     font-size: 0.75rem;
 }
-/* date and time */
+/*
+================================== CLOCK SECTION =================================
+ */
 .current-date, .current-time{
-    padding: 1rem;
+    padding:1rem ;
     font-size: 2.5rem;
 }
-/* ---------------chat button styling------------------ */
+/*
+================================== CHAT-BTN SECTION =================================
+ */
 .chat-btn{
     position: fixed;
     bottom: 1rem;
     right: 1rem;
-    background-color: rgb(0 106 255);
+    background-color: rgb(27, 122, 255);
     border-radius: 50%;
     padding: 0.875rem;
     box-shadow: 0 0 1rem rgb(33, 96, 184);
@@ -133,47 +158,55 @@ form{
     right: 0.125rem;
     border-radius: 50%;
 }
-.chat-btn:active{
-    background-color: rgb(0 106 255);
-}
-/* ---------------- color-btn section ----------------------- */
+.chat-btn:active{background-color: rgb(0 106 255);}
+/*
+================================== COLOR-BTN SECTION =================================
+ */
 .color-btn-wrap{
     padding: 1rem;
     border: 2px solid transparent;
     margin-bottom: 0.938rem;
 }
-.color-btn{
-    margin: 0 1rem;
-}
-/* colors for color-btn  */
+.color-btn{margin-right: 1rem;}
+/* 
+    colors for color-btn  
+*/
+/*   red    */
 .color-btn--red{background-color: rgb(204, 24, 24);}
+.color-btn--red:hover{background-color: rgb(165, 16, 16);}
+/*  yellow  */
 .color-btn--yellow{background-color: rgb(228, 201, 48);}
+.color-btn--yellow:hover{background-color: rgb(199, 174, 32);}
+/*  green   */
 .color-btn--green{background-color: green;}
+.color-btn--green:hover{background-color: rgb(0, 94, 0);}
+/*  blue    */
 .color-btn--blue{background-color: blue;}
-/* colors for color-btn-wrap */
+.color-btn--blue:hover{background-color: rgb(0, 0, 168);}
+/* 
+    colors for color-btn-wrap
+*/
 .color-btn-wrap--red{border: 2px solid rgb(204, 24, 24);}
 .color-btn-wrap--yellow{border: 2px solid rgb(228, 201, 48);}
 .color-btn-wrap--green{border: 2px solid green;}
 .color-btn-wrap--blue{border: 2px solid blue;}
-/* -------------accordian section--------------------------*/
-.accordian-wrap{
-    border: 1px solid rgb(206, 206, 206);
-    width: 30%;
+/*
+================================== ACCORDIAN SECTION =================================
+ */
+.accordion-wrap{
+    max-width: 22rem;
+    margin-left:2rem;
     border-radius: 0.5rem;
-    padding: 1.5rem 1rem 1rem;
-    margin: auto;
+    padding: 1.5rem 1.5rem 1rem;
+    border: 1px solid rgb(206, 206, 206);
 }
-.accordian{
-    margin-bottom: 0.5rem;
-}
-.arrow-left, .arrow-down{
-    position: relative;
-}
+.accordion{margin-bottom: 0.5rem;}
+.arrow-left, .arrow-down{position: relative;}
 .arrow-left::before{
     position: absolute;
     content: '\f105';
     font-family: "Font Awesome 5 Pro";
-    left: 0.313rem;
+    left: 0.625rem;
     top: 50%;
     transform: translateY(-50%);
     font-size: 1.5rem;
@@ -182,90 +215,85 @@ form{
     position: absolute;
     content: '\f105';
     font-family: "Font Awesome 5 Pro";
-    left: 0.313rem;
+    left: 0.625rem;
     top: 50%;
     font-size: 1.5rem;
     transform: translateY(-50%) rotate(90deg);
 }
-.accordian-btn{
+.accordion-btn{
     background-color: rgb(253, 253, 253);
     color: #000;
     border-radius: 0;
     width: 100%;
     text-align: left;
     font-size: 1rem;
+    letter-spacing: 0.5px;
     padding: 0.875rem 0.875rem 0.875rem 2rem;
 }
-.accordian-btn:active{
-    background-color: rgb(224, 224, 224);
-}
-.accordian-content{
-    padding-left: 2rem;
-    margin-bottom: 1rem;
-}
-.accordian-desc{
+.accordion-content{margin: 0.313rem 0rem 1rem 2rem;}
+.accordion-desc{
     margin: 0;
     color: rgb(110, 110, 110);
 }
-.collapse{display:none;}
-/* -------------    drag drop section   --------------------*/
+.accordion-btn:hover{background-color: rgb(240, 240, 240);}
+.accordion-btn:active{background-color: rgb(224, 224, 224);}
+/*
+================================== DRAG-DROP SECTION =================================
+ */
 .column{
     width:50%;
-    padding:1rem
+    padding:1rem;
 }
-.drag-drop-container{
-    border: 1px solid gray;
+.drag-drop-container, .draggable-list{
     width: 100%;
     min-height: 10rem;
     height: 100%;
+    padding: 1rem;
+    border: 1px solid rgb(206, 206, 206);
 }
 .draggable-list{
-    background-color: rgb(234, 247, 255);
-    margin: 0;
-    padding: 0 2rem;
-    list-style-type: none;
-    min-height: 10rem;
-    max-height: 100%;
+    background-color: #d3eafd;
 }
 .draggable-item{
-    padding:1rem;
-    margin:0 0 0.5rem 0;
     width: 50%;
+    list-style-type: none;
+    padding:1rem;
+    margin: 0.5rem auto;
+    text-align: center;
 }
 .draggable-item:hover{
-    background-color: rgb(145, 196, 255);
+    background-color: #a6d5fa;
     cursor: pointer;
     user-select: none;
 }
-.draggable-item:active{
-    transform: scale(0.99);
-}
-.tooltip{
-    position: relative;
-    cursor: pointer;
-    /* float: right; */
-}
+.draggable-item:active{transform: scale(0.99);}
+/*
+================================== TOOLTIP SECTION =================================
+ */
+.tooltip{cursor: pointer;}
 .tooltip-text{
-    position: absolute;
-    width: 256px;
-    padding: 0.875rem;
-    margin: 0 0.625rem;
+    position: fixed;
+    width: max-content;
+    padding: 1rem;
     border-radius: 0.5rem;
     background-color: #fff;
     box-shadow: 0 0 1rem rgba(0, 0, 0,0.2);
-    z-index: 9;
 }
-/* -------------------Sub-menu drop-down sections----------------------- */
-.drop-down-wrap{
+.tooltip > .tooltip-text:hover{
+    display: none;
+}
+/* .tooltip-wrapper{
+    float: right;
+} */
+/*
+================================== SUBMENU (DROP-DOWN) SECTION =================================
+ */
+.dropdown-wrap .menu{
     width: 25%;
 }
-.icon-gear{
-    margin-right: 1rem;
-}
-.menu {
-    padding: 0;
-}
-.submenu{
+.icon-gear{margin-right: 1rem;}
+.menu {padding: 0;}
+.dropdown-wrap .submenu{
     padding-left: 0.625rem;
 }
 .menu-link{
@@ -275,14 +303,8 @@ form{
     color: gray;
     font-size: 1.2rem;
 }
-.submenu .menu-link{
+.dropdown-wrap .submenu .menu-link{
     padding-left: 2rem;
-}
-.menu-link:hover{
-    background-color: #f5f5f5;
-}
-.menu-link:active{
-    transform: scale(0.98);
 }
 .menu-item-child > .menu-link{
     color: #303030;
@@ -291,84 +313,211 @@ form{
     background-color: #cccccc;
 }
 .menu-item-child .arrow-left::before, .menu-item-child .arrow-down::before{
-   left: 94%;
+    left: 92%;
 }
-/* ------------------- DRAWER SECTIONS----------------------- */
-/* .drawer-btn-wrap{
+.menu-link:hover{background-color: #eeeeee;}
+.menu-link:active{transform: scale(0.99);}
+/*
+================================== DRAWER SECTION =================================
+ */
+.drawer-btn-wrap{
     justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    border: 1px solid rgb(42, 131, 255);
+    padding: 2rem;
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 0.5rem;
+    /* float: right; */
 }
 .drawer-btn{
-    background-color: #fff;
+    background-color: #ffffff;
     color: rgb(118, 175, 255);
-    margin: 1rem;
+    margin:0.5rem;
     font-weight: bold;
 }
-.overlay-wrap{
+/* 
+------------ overlay ------------------------
+ */
+.overlay{
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.25);
+    transition: all 0.4s ease-in-out;
 }
 .overlay-content{
     position: absolute;
-    content: '';
     background-color: #fff;
+    z-index: 2;
+    box-shadow: 0 0 20px rgb(110, 110, 110);
+    transition: all 0.2s ease-in-out;
 }
-.overlay-content--left{
+/* 
+------------ Drawer position and animation ------------------------
+ */
+.left, .right{
     width: 20%;
     height: 100%;
+}
+.top, .bottom{
+    width: 100%;
+    height: auto;
+}
+.left{
     left: 0;
+    transform: translateX(-100%);
+    transition: transform 0.25s linear;
 }
-.overlay-content--right{
-    width: 20%;
-    height: 100%;
+.right{
     right: 0;
+    transform: translateX(100%);
+    transition: transform 0.25s linear;
 }
-.overlay-content--top{
-    width: 100%;
-    height: auto;
+.to-left, .to-right{
+    transform: translateX(0);
+}
+.top{
     top: 0;
+    transform: translateY(-100%);
+    transition: transform 0.25s linear;
 }
-.overlay-content--bottom{
-    width: 100%;
-    height: auto;
-    bottom: 0;
+.bottom{
+    bottom:0;
+    transform: translateY(100%);
+    transition: transform 0.25s linear;
 }
-.drawer .submenu{
-    padding: 0.75rem 0 0 0;
-    margin: 0;
+.to-top, .to-bottom{
+    transform: translateY(0);
 }
-.drawer .submenu .menu-item{
-    margin-bottom: 0.625rem;
-}
+/*
+------------------- drawer------------------------
+ */
+ .drawer .submenu {
+    padding: 1rem 0;
+ }
 .drawer .submenu:first-child{
     border-bottom: 1px solid rgb(184, 184, 184);
 }
-.overlay-content--top .drawer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
+.drawer .submenu .menu-link{
+    padding: 1rem 2rem;
+    font-size: 1rem;
 }
-.overlay-content--top .submenu, .overlay-content--top .submenu .menu-item{
+.drawer .submenu .menu-link i{
+    margin-right: 1.5rem;
+}
+.top .drawer, 
+.bottom .drawer{
+    padding: 1.5rem;
+}
+.top .submenu, .top .submenu .menu-item,
+.bottom .submenu, .bottom .submenu .menu-item{
     display: inline-block;
-    margin: 0;
 }
-.overlay-content--top .submenu{
-    padding: 0;
+.top .submenu, 
+.bottom .submenu{
+    padding: 0 1rem;
 }
-.overlay-content--top .submenu .menu-link{
+.top .submenu .menu-link,
+.bottom .submenu .menu-link{
     padding: 0.5rem 1rem;
-    margin:0 1rem;
-    width: auto;
 }
-.overlay-content--top .submenu:first-child{
+.top .submenu:first-child,
+.bottom .submenu:first-child{
     border-bottom: 0;
     border-right: 1px solid rgb(184, 184, 184);
-} */
+}
+/*
+================================== MODAL SECTION =================================
+ */
+.modal-wrap .overlay-content{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    /* transform: translate(-50%, -50%); */
+    width: 32rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    opacity: 0;
+    transition:opacity 0.25s linear, transform 0.25s linear;
+}
+/*  -----modal animation----   */
+.modal{
+    opacity: 1 !important;
+    transform: translate(-50%, -50%) !important;
+}
+/*  ----modal----   */
+.modal-header, .label-container{
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-header{
+    padding:1rem 2rem;
+    background-color: #f5f9ff;
+}
+.modal-title{margin: 0;}
+.modal-content{padding:1.25rem 2rem;}
+.modal-form .form-group{
+    margin: 0;
+}
+.modal-form label{
+    font-weight: 600;
+    color: #505050;
+}
+.modal-form .form-control{
+    margin-top: 0.875rem;
+}
+.modal-btn-wrap{
+    padding:1.25rem 2rem;
+    background-color: #f5f9ff;
+    margin: 0 -0.5rem;
+}
+.close-btn{
+    background-color: transparent;
+    color: rgb(235, 68, 68);
+    font-size: 1.2rem;
+    margin-right: -0.5rem;
+    padding: 0 0.5rem;
+}
+.close-btn:hover{
+    background-color: inherit;
+    color: rgb(219, 50, 50);
+}
+.modal-btn{
+    width: 100%;
+    margin:0 0.5rem;
+    padding:0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.modal-btn:nth-child(2){background-color: rgb(235, 68, 68);}
+.modal-btn:nth-child(2):hover{background-color: rgb(219, 50, 50);}
+.modal-btn:nth-child(2):active{background-color: rgb(202, 40, 40);}
+/*
+================================== TWO-LEVEL-MODAL SECTION =================================
+ */
+.two-level-modal .overlay-content{
+    width: 38rem;
+}
+ .two-level-modal .form-group{
+    margin-bottom: 1rem;
+}
+.two-level-modal .modal-form{
+    overflow-y: auto;
+}
+.modal-widget .btn{
+    background-color: #dde5f1;
+    color: #505050;
+    font-weight: bold;
+}
+.modal-widget .btn i{
+    margin-right: 0.5rem;
+}
+.modal-widget .btn:hover{
+    background-color: #c4d0e1;
+}
+.modal-form .form-control{
+    resize: vertical;
+}/*
+
+*/
